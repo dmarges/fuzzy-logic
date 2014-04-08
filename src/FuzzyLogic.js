@@ -7,64 +7,60 @@
 var FuzzyLogic = {
 
 	fuzzyGrade: function(value, x0, x1) {
-		var result = 0,
-			x = value;
+		var result = 0;
 
-		if(x <= x0) {
+		if(value <= x0) {
 			result = 0;
-		} else if(x >= x1) {
+		} else if(value >= x1) {
 			result = 1;
 		} else {
-			result = (x / (x1 - x0)) - (x0 / (x1 - x0));
+			result = (value / (x1 - x0)) - (x0 / (x1 - x0));
 		}
 
 		return result;
 	},
 
 	reverseFuzzyGrade: function(value, x0, x1) {
-		var result = 0,
-			x = value;
+		var result = 0;
 
-		if(x <= x0) {
+		if(value <= x0) {
 			result = 1;
-		} else if(x >= x1) {
+		} else if(value >= x1) {
 			result = 0;
 		} else {
-			result = (-x / (x1 - x0)) + (x1 / (x1 - x0));
+			result = (-value / (x1 - x0)) + (x1 / (x1 - x0));
 		}
 
 		return result;
 	},
 
 	fuzzyTriangle: function(value, x0, x1, x2) {
-		var result = 0,
-			x = value;
+		var result = 0;
 
-		if(x <= x0) {
+		if(value <= x0) {
 			result = 0;
-		} else if(x === x1) {
+		} else if(value === x1) {
 			result = 1;
-		} else if((x > x0) && (x < x1)) {
-			result = (x / (x1 - x0)) - (x0 / (x1 - x0));
+		} else if((value > x0) && (value < x1)) {
+			result = (value / (x1 - x0)) - (x0 / (x1 - x0));
 		} else {
-			result = (-x / (x2 - x1)) + (x2 / (x2 - x1));
+			result = (-value / (x2 - x1)) + (x2 / (x2 - x1));
 		}
 
 		return result;
 	},
 
 	fuzzyTrapezoid: function(value, x0, x1, x2, x3) {
-		var result = 0,
-			x = value;
+		var result = 0;
 
-		if(x <= x0) {
+		if(value <= x0) {
 			result = 0;
-		} else if((x > x0) && (x < x1)) {
-			result = (x / (x1 - x0)) - (x0 / (x1 - x0));
-		} else if((x >= x1) && (x<=x2)) {
+		} else if((value > x0) && (value < x1)) {
+			result = (value / (x1 - x0)) - (x0 / (x1 - x0));
+		} else if((value >= x1) && (value<=x2)) {
 			result = 1;
 		} else {
-			result = (-x / (x3 - x2)) + (x3 / (x3 - x2));
+			result = (-value / (x3 - x2)) + (x3 / (x3 - x2));
 		}
 
 		return result;
