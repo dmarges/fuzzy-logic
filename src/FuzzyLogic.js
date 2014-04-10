@@ -93,5 +93,4 @@ var FuzzyLogic = {
 
 		return numerator / denominator;
 	}
-
 };
