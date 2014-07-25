@@ -1,6 +1,7 @@
 {
   "name": "fuzzy-logic-library",
   "version": "0.0.1",
+  "description": "A static-method library for calculating Fuzzy Logic on given values.",
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-contrib-jshint": "~0.6.3",

@@ -1,6 +1,6 @@
 /**
  * A static-method library for calculating Fuzzy Logic on given values.
- * @author Donnie Marges <dmarges@postmedia.com>
+ * @author Donnie Marges
  * @version 0.0.1
  */
 
